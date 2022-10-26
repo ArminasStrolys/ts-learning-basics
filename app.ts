@@ -10,7 +10,7 @@ const resultPhrase = 'Result is: ';
 
 const result = testNum(num1, num2, printResult, resultPhrase);
 console.log(result);
-
+console.log('--------------------');
 //------------------------------------------------------------------------
 
 // const person: object = { // error, need specification
@@ -41,11 +41,13 @@ const person: {
 };
 
 console.log(person.name);
-
+console.log('--------------------');
 //------------------------------------------------------------------------
 
+type numStr = string | number; // alias
+
 const combine = (
-  inp1: number | string,
+  inp1: numStr,
   inp2: number | string,
   // resultConversion: string
   resultConversion: 'as-number' | 'as-string' // a better way
@@ -69,3 +71,17 @@ const test2 = combine('Marry', 'Joe', 'as-string');
 console.log(test2);
 const test3 = combine(66, 99, 'as-string');
 console.log(test3);
+console.log('--------------------');
+//------------------------------------------------------------------------
+
+const sub = (n1: number, n2: number): number => {
+  // explicit setting a function return type
+  return n1 - n2;
+};
+
+const prntRes = (num: number): void => {
+  console.log('Number: ' + num);
+  // return // can VOID youse w/ or w/out return
+};
+
+console.log(prntRes(sub(250, 80)));
