@@ -10,3 +10,20 @@ const resultPhrase = 'Result is: ';
 
 const result = testNum(num1, num2, printResult, resultPhrase);
 console.log(result);
+
+//------------------------------------------------------------------------
+
+// const person: object = { // error, need specification
+const person: {
+  name: string;
+  age: number;
+  hobbies: string[];
+  cars: [string, number];
+} = {
+  name: 'Jack',
+  age: 99,
+  hobbies: ['sports', 'cars'],
+  cars: ['bmw', 3],
+};
+
+console.log(person.name);
