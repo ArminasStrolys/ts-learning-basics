@@ -85,3 +85,13 @@ const prntRes = (num: number): void => {
 };
 
 console.log(prntRes(sub(250, 80)));
+
+// let combinedValues; // does not throw err in TS, only after compilation
+// let combinedValues: Function;
+let combinedValues: (a: number, b: number) => number; // a more precise type
+
+combinedValues = sub;
+// combinedValues = prntRes; // throws err if usding precise type
+// combinedValues = 10 // does not throw err in TS, only after compilation
+
+console.log(combinedValues(9, 80));

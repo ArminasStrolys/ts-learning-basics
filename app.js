@@ -9,6 +9,7 @@ var printResult = true;
 var resultPhrase = 'Result is: ';
 var result = testNum(num1, num2, printResult, resultPhrase);
 console.log(result);
+console.log('--------------------');
 //------------------------------------------------------------------------
 // const person: object = { // error, need specification
 // const ADMIN = 0
@@ -29,8 +30,11 @@ var person = {
     role: Role.ADMIN
 };
 console.log(person.name);
-//------------------------------------------------------------------------
-var combine = function (inp1, inp2, resultConversion) {
+console.log('--------------------');
+var combine = function (inp1, inp2, 
+// resultConversion: string
+resultConversion // a better way
+) {
     var result;
     if (typeof inp1 === 'number' &&
         typeof inp2 === 'number' &&
@@ -48,3 +52,21 @@ var test2 = combine('Marry', 'Joe', 'as-string');
 console.log(test2);
 var test3 = combine(66, 99, 'as-string');
 console.log(test3);
+console.log('--------------------');
+//------------------------------------------------------------------------
+var sub = function (n1, n2) {
+    // explicit setting a function return type
+    return n1 - n2;
+};
+var prntRes = function (num) {
+    console.log('Number: ' + num);
+    // return // can VOID youse w/ or w/out return
+};
+console.log(prntRes(sub(250, 80)));
+// let combinedValues; // does not throw err in TS, only after compilation
+// let combinedValues: Function;
+var combinedValues; // a more precise type
+combinedValues = sub;
+// combinedValues = prntRes; // throws err if usding precise type
+// combinedValues = 10 // does not throw err in TS, only after compilation
+console.log(combinedValues(9, 80));
