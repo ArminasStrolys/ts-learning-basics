@@ -84,7 +84,7 @@ const prntRes = (num: number): void => {
   // return // can VOID youse w/ or w/out return
 };
 
-console.log(prntRes(sub(250, 80)));
+console.log('Numz without return: ' + prntRes(sub(250, 80)));
 
 // let combinedValues; // does not throw err in TS, only after compilation
 // let combinedValues: Function;
