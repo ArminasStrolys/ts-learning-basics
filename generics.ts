@@ -9,3 +9,5 @@ function merge<T extends object, U>(objC: T, objB: U) {
 
 const mergeObj = merge({ name: 'Stewart' }, { age: 66 });
 console.log(mergeObj.age);
+
+//
