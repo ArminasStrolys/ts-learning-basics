@@ -11,7 +11,7 @@ const resultPhrase = 'Result is: ';
 const result = testNum(num1, num2, printResult, resultPhrase);
 console.log(result);
 console.log('--------------------');
-//------------------------------------------------------------------------
+//-----------------------------------------------------------------------
 
 // const person: object = { // error, need specification
 
@@ -42,7 +42,7 @@ const person: {
 
 console.log(person.name);
 console.log('--------------------');
-//------------------------------------------------------------------------
+//-----------------------------------------------------------------------
 
 type numStr = string | number; // alias
 
