@@ -17,3 +17,21 @@ class Character {
 const char = new Character();
 
 console.log(char);
+
+//----------------- FACTORY DECORATOR
+
+const Information = (logInfo: string) => {
+  return (constructor: Function) => {
+    console.log(logInfo);
+    console.log(logInfo);
+  };
+};
+
+@Information('Info-screen here =>')
+class Char {
+  name = 'T-rex';
+
+  constructor() {
+    console.log('The rex is coming!');
+  }
+}
