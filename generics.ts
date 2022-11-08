@@ -11,4 +11,3 @@ const mergeObj = merge({ name: 'Stewart' }, { age: 66 });
 console.log(mergeObj.age);
 ///
 ///
-///
